@@ -1,0 +1,139 @@
+<html>
+
+<head>
+   <title>Main</title>
+   <link rel="icon" type="image/x-icon" href="../static/space.jpg">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <style>
+      .mySlides {
+         display: none;
+      }
+
+      .navbar {
+         width: 100%;
+         background-color: transparent;
+         overflow: auto;
+         display: flex;
+      }
+
+      .navbar a {
+         float: right;
+         text-align: center;
+         padding: 30px;
+         color: whitesmoke;
+         text-decoration: none;
+         font-family: Georgia, 'Times New Roman', Times, serif;
+         font-size: larger;
+      }
+
+      .navbar a:hover {
+         background-color: purple;
+      }
+
+      img {
+         max-width: 100%;
+         height: auto;
+      }
+
+      input[type=submit]:hover {
+         background-color: lawngreen;
+      }
+
+      body {
+         background-image: url("space.jpg");
+         margin: 0px;
+         background-size: 100%;
+         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+         font-size: large;
+         background-repeat: repeat;
+      }
+
+      .submit {
+         width: 100%;
+         background-color: grey;
+         color: black;
+         padding: 14px 20px;
+         margin: 8px 0;
+         border: none;
+         border-radius: 20px;
+         cursor: pointer;
+      }
+
+      .input {
+         width: 100%;
+         padding: 12px 20px;
+         margin: 8px 0;
+         display: inline-block;
+         border: 1px solid #ccc;
+         border-radius: 18px;
+         box-sizing: border-box;
+         font-style: italic;
+      }
+
+      .pInfo {
+         width: 50%;
+         padding-left: 15px;
+         float: initial;
+         width: 45%
+      }
+
+      .footer {
+         background-image: url(downloadboo.jpg);
+         text-align: center;
+         font-family: arial;
+         padding: 50px;
+      }
+
+      .footer a:hover {
+         background-color: rgb(112, 187, 216);
+      }
+
+      body {
+         background-image: url("../static/space.jpg");
+         background-size: cover;
+         background-position: center center;
+      }
+   </style>
+</head>
+
+<body>
+   <header>
+      {% include "navbar.html" %}
+   </header>
+   <br>
+   <br>
+   <br>
+   <div class="w3-content w3-section" style="max-width:500px;float:left ; margin: 30px 30px">
+      <img class="mySlides" src="../static/gemini.jpg" style="width:100%">
+      <img class="mySlides" src="../static/pisces.jpg" style="width:100% ">
+      <img class="mySlides" src="../static/virgo.jpg" style="width:100%">
+      <img class="mySlides" src="../static/taurus.jpg" style="width:100%">
+      <img class="mySlides" src="../static/sagittarius.jpg" style="width:100% ">
+      <img class="mySlides" src="../static/libra.jpg" style="width:100%">
+      <img class="mySlides" src="../static/leo.jpg" style="width:100% ">
+      <img class="mySlides" src="../static/capricorn.jpg" style="width:100%">
+      <img class="mySlides" src="../static/cancer.jpg" style="width:100% ">
+      <img class="mySlides" src="../static/aquarius.jpg" style="width:100%">
+      <img class="mySlides" src="../static/aries.jpg" style="width:100%">
+      <img class="mySlides" src="../static/scorpio.jpg" style="width:100%">
+   </div>
+</body>
+<script>
+   var myIndex = 0;
+   carousel();
+   function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) { myIndex = 1 }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 1000); // Change image every 2 seconds
+   }
+</script>
+
+</html>

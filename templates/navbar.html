@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans - serif;
+        }
+
+        .navbar {
+            width: 100%;
+            background-image: url(hd.jpg);
+            overflow: auto;
+            display: flex;
+        }
+
+        .navbar a {
+            float: right;
+            text-align: center;
+            padding: 30px;
+            color: whitesmoke;
+            text-decoration: none;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: large;
+        }
+
+        .navbar a:hover {
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <img src="../static/zod.jpg" style="width: 100px;border-radius:20px ; float: left">
+        <h1
+            style="color: antiquewhite; font-family:'Times New Roman', Times, serif ;border: chartreuse;font-style: italic; font: size 50px ;">
+            <span>The Glimpse of Signs</span>
+        </h1>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{{url_for('home_')}}"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="{{url_for('about_us')}}"><i class="fa fa-fw fa-envelope"></i> About Us</a>
+        <a href="{{url_for('contact_')}}"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+        <a href="{{url_for('login_')}}"><i class="fa fa-fw fa-home"></i>Sign in</a>
+    </div>
+</body>
+
+</html>

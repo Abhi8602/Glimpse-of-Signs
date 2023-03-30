@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <title>{{zodiac.title()}}</title>
+    <link rel="icon" type="image/x-icon" href="../static/{{zodiac}}.jpg">
+    <style>
+        .navbar {
+            width: 100%;
+            background-color: transparent;
+            overflow: auto;
+            display: flex;
+        }
+
+        .navbar a {
+            float: right;
+            text-align: center;
+            padding: 30px;
+            color: whitesmoke;
+            text-decoration: none;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: larger;
+        }
+
+        .navbar a:hover {
+            background-color: purple;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        body {
+            background-image: url("../static/space1.jpg");
+            margin: 0px;
+            background-size: 100%;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: large;
+        }
+
+        .center {
+            margin: auto;
+            width: 60%;
+            border: 3px solid #73AD21;
+            padding: 10px;
+        }
+
+        .submit {
+            width: 100%;
+            background-color: darkred;
+            color: black;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: lawngreen;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <img src="../static/zod.jpg" style="width: 100px; border-radius: 20px ; float: left">
+            <h1
+                style="color: antiquewhite; font-family:'Times New Roman', Times, serif ;border: chartreuse;font-style: italic; font: size 50px ;">
+                <span>The Glimpse of Signs</span>
+            </h1>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="{{url_for('home_')}}"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a href="{{url_for('about_us')}}"><i class="fa fa-fw fa-envelope"></i> About Us</a>
+            <a href="{{url_for('contact_')}}"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+            <a href="{{url_for('login_')}}"><i class="fa fa-fw fa-home"></i>log out</a>
+        </div>
+    </header>
+    <center>
+        <img class="image" src="../static/{{zodiac}}.jpg" alt="Aries" style="width:50% ;">
+        <div class="center">
+            <h1
+                style=" text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-style: oblique;color: antiquewhite;">
+                <span>So you are a {{zodiac.title()}}!
+                </span>
+                <p style="color: aqua;">
+                <ul>
+                    {% for test in data[0:10] %}
+                    <li> {{ test }} </li>
+                    {% endfor %}
+                </ul>
+                </p>
+        </div>
+    </center>
+</body>
+
+</html>
